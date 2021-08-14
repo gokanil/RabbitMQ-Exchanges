@@ -32,7 +32,7 @@ namespace RabbitMQ.Exchanges
                                          global: false);
 
                         var consumer = new EventingBasicConsumer(channel);
-                        channel.BasicConsume(queueName,
+                        channel.BasicConsume(queue: queueName,
                                              autoAck: false,
                                              consumer: consumer);
 

@@ -11,7 +11,7 @@ namespace rabbitmqtestConsumer
             //Uyarı: Key ve Headers değerleri girerken Türkçe karakter kullanırsanız daha sonrasında direkt olarak işlem yapamazsınız.
             Parallel.Invoke(
                 () => Default.Consumer("biber"),
-                () => DirectExchange.Consumer("rambutanş"),
+                () => DirectExchange.Consumer("rambutan"),
                 () => FanoutExchange.Consumer(),
                 () => TopicExchange.Consumer("sebze.#.tohum"),
                 () => HeaderExchange.Consumer(new Dictionary<string, object>() { ["key"] = "patates", ["lezzet"] = "..." }));
